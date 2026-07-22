@@ -6,6 +6,22 @@
     <meta name="x-apple-disable-message-reformatting">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Email Title</title>
+
+    <!--
+        The comment below will be read by older versions of outlook will run this code.
+
+        Outlook will run the [if mso] conditional
+        <noscript> outlook can process this container without relying on js
+
+        <xml> needs to be wrapped in the xml tag and <o:OfficeDocumentSetting> will start the configuration. the <o: is the prefix for microsoft office namespace
+
+        <AllowPNG/> this tells old versions of outlook to load png images properly
+
+        <o:PixelsPerInch>96</o:PixelsPerInch> This tells outlook to render 96 pixles per inch the standard screen resolution CSS assumes. With out it outlook may scale images incorrectly.
+
+        In summary this block tells outlook allow png images and calculate the dimensions at 96 pixles per inch
+     -->>
+
     <!--[if mso]>
     <noscript>
         <xml>
